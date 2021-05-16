@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="external">
+      <div class="internal1">
+          <img src="./images/bg-desktop-dark.jpg" alt="">
+      </div>
+      <div class="mainlayout mx-auto">
+        <div class="alert align-item-center" id="message"></div>
+        <form  id="formitem">
+            <h2 class="text-light log d-inline-block">TODO</h2>
+            <div class="d-inline-block bg-green float-end switch" onclick="fc()"></div>    
+            <div class="input-group mb-3 mt-3">
+                <input type="text" class="form-control border-0 inp " id="inputtext" placeholder="Enter List item" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-danger" type="submit" id="button-addon2">Add item</button>
+              </div>
+            </form>
+              <!--nav --> 
+              <ul class="nav nav-tabs mb-1 border-0  ncb">
+                <li class="nav-item" data-type='all'>
+                  <a class="nav-link dc active"  href="#">ALL</a>
+                </li>
+                <li class="nav-item" data-type='todo' >
+                  <a class="nav-link dc" href="#">Todo</a>
+                </li>
+                <li class="nav-item" data-type='completed'>
+                  <a class="nav-link dc"  href="#">Completed</a>
+                </li>
+              </ul>
+              <!--list items -->
+              <ul class="list-group list-group-flush" id="listitems">
+                <!--dummy data for design front end<li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="dc">Task1</span>
+                    <span>
+                        <a><i class="fas fa-trash red"></i></a>
+                        <a><i class="fas fa-edit blue"></i></a>
+                        <a><i class="fas fa-check green"></i></a>
+                     </span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="dc">Task2</span>
+                    <span>
+                        <a><i class="fas fa-trash red"></i></a>
+                        <a><i class="fas fa-edit blue"></i></a>
+                        <a><i class="fas fa-check green"></i></a>
+                     </span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="dc">Task3</span>
+                    <span>
+                        <a><i class="fas fa-trash red"></i></a>
+                        <a><i class="fas fa-edit blue"></i></a>
+                        <a><i class="fas fa-check green"></i></a>
+                     </span>
+                </li>
+                -->
+              </ul>
+              <input type="hidden" value="" id="objindex">
+              <input type="hidden" value="all" id="tabvalue">
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="./todo.js"></script>
+</body>
+</html>

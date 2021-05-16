@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgc: #181824;
+    --listc:#25273c;
+    --dmc:#fff;
+    --tc:#fff;
+    --sun:url('./images/icon-sun.svg');
+    --moon:url('./images/icon-moon.svg');
+}
+body{
+    background-color:var(--bgc);
+}
+.dc{
+    color: var(--tc);
+}
+.lmt{
+    --bgc:var(--dmc);
+    --listc:var(--dmc);
+    --tc:#000;
+    --sun:var(--moon);
+    background-color: var(--dmc);
+}
+.log{
+    letter-spacing: .5rem;
+}
+.external{
+    overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.mainlayout{
+    width: 50%;
+    position: relative;
+    border-radius: 3px;
+    top: -10rem;
+}
+.green{
+    color: rgb(105, 214, 105);
+}
+.red{
+color: rgb(233, 94, 94);
+}
+.blue{
+    color: #7676ff;
+}
+.list-group{
+    font-size: 1.5rem;
+}
+#listitems li{
+    background-color: var(--listc);
+}
+.ncb{
+    background-color: var(--listc);
+}
+i{
+    cursor: pointer;
+}
+.switch{
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    background-image: var(--sun);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav.nav-tabs li.nav-item a.nav-link.active{
+    border: 0;
+    background-color:#F93154;
+}
+@media only screen and (max-width: 600px) {
+   html{
+       font-size: 9px;
+   }
+  }

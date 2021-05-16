@@ -41,12 +41,6 @@ const removeitem=(item)=>{
     const removeindex=todoitems.indexOf(item)
     todoitems.splice(removeindex,1) 
 }
-const updateitem=(currentitemindex,value)=>{
-    const newitem=todoitems[currentitemindex]
-    newitem.name=value
-    todoitems.splice(currentitemindex,1,newitem)
-    localst(todoitems)
-}
 //function for action buttons
 const handelItem=(itemData)=>{
     const items=document.querySelectorAll('.list-group-item')
@@ -63,13 +57,6 @@ const handelItem=(itemData)=>{
         const filtervalue=document.querySelector('#tabvalue').value
         getfilteritem(filtervalue)
     })
-     //edit
-    item.querySelector('[data-edit]').addEventListener('click',(e)=>{
-        e.preventDefault()
-        inputitem.value=itemData.name
-        document.querySelector('#objindex').value=todoitems.indexOf(itemData)
-    })
-    
     //delete
     item.querySelector('[data-delete]').addEventListener('click',(e)=>{
         e.preventDefault()
@@ -93,7 +80,6 @@ if(todoitems.length>0)
                     <span class="dc" data-time=${item.date}>${item.name}</span>
                     <span>
                         <a href='#' data-delete><i class="fas fa-trash red"></i></a>
-                        <a href='#' data-edit><i class="fas fa-edit blue"></i></a>
                         <a href='#' data-done><i class="fas fa-check green"></i></a>
                      </span>
                 </li>
@@ -140,14 +126,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             alert('Enter Your Task')
         }
         else{
-            const currentintemindex=document.querySelector('#objindex').value
-            if(currentintemindex)
-            {
-//update code in this section
-                updateitem(currentintemindex,itemname)
-                document.querySelector('#objindex').value=''
-            }
-        else{
             const itemobj={
                 name:itemname,
                 isDone:false,
@@ -157,8 +135,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             localst(todoitems)           
         }
         getlocaldata()
-    }
-    itemindex.value=''
     })
    //loads local storage data    
     getlocaldata()
